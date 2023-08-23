@@ -1,6 +1,32 @@
 .item {
+  position: relative;
   margin: 1rem 0;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
   padding: 1rem;
   background-color: #f7f5ef;
+}
+
+.item::before,
+.item::after {
+  display: block;
+  content: "";
+  width: 2em;
+  height: 2.75px;
+  background: rgb(211, 30, 30);
+  transition: all ease-in-out 250ms;
+  cursor: pointer;
+}
+
+.item::before {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  transform: rotate(-45deg);
+}
+
+.item::after {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  transform: rotate(45deg);
 }
